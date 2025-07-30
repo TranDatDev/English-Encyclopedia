@@ -1,0 +1,162 @@
+# Danh từ
+
+## 1. Định nghĩa
+
+**Danh từ (Noun)** là từ dùng để chỉ người, vật, địa điểm, ý tưởng hoặc hiện tượng.
+
+📌 _Ví dụ_:
+
+- **person**: teacher, doctor, friend
+- **thing**: table, phone, computer
+- **place**: Vietnam, school, market
+- **idea**: love, freedom, knowledge
+
+---
+
+## 2. Phân loại danh từ
+
+| Loại danh từ                              | Ví dụ                                 |
+| ----------------------------------------- | ------------------------------------- |
+| Danh từ cụ thể (Concrete noun)            | cat, apple, rain                      |
+| Danh từ trừu tượng (Abstract noun)        | beauty, anger, happiness              |
+| Danh từ chung (Common noun)               | city, book, car                       |
+| Danh từ riêng (Proper noun)               | John, London, Coca-Cola               |
+| Danh từ đếm được (Countable noun)         | chair, book, idea                     |
+| Danh từ không đếm được (Uncountable noun) | water, information, rice              |
+| Danh từ tập hợp (Collective noun)         | team, family, class                   |
+| Danh từ ghép (Compound noun)              | toothpaste, blackboard, mother-in-law |
+
+---
+
+## 3. Hình thái danh từ
+
+- **Thêm hậu tố để tạo danh từ:**
+
+| Hậu tố        | Ý nghĩa               | Ví dụ                    |
+| ------------- | --------------------- | ------------------------ |
+| -ness         | trạng thái            | happiness, darkness      |
+| -ment         | hành động/kết quả     | development, improvement |
+| -tion / -sion | hành động/quá trình   | action, decision         |
+| -ity / -ty    | chất lượng/trạng thái | ability, honesty         |
+| -er / -or     | người làm nghề        | teacher, actor           |
+
+---
+
+## 4. Danh từ đếm được & không đếm được
+
+### Danh từ đếm được:
+
+- Có dạng số ít/số nhiều
+- Dùng được với a/an, many, few
+
+📌 _Ví dụ_:
+**a book**, **two apples**, **many ideas**
+
+### Danh từ không đếm được:
+
+- Không có dạng số nhiều
+- Dùng với much, little
+
+📌 _Ví dụ_:
+**water**, **information**, **furniture**
+
+---
+
+## 5. Danh từ số ít – số nhiều
+
+### Quy tắc thông thường:
+
+- **-s**: book → books
+- **-es**: box → boxes
+- **y → ies**: baby → babies
+- **f/fe → ves**: knife → knives
+
+### Danh từ bất quy tắc:
+
+- man → men
+- child → children
+- foot → feet
+- mouse → mice
+
+---
+
+## 6. Vị trí và chức năng của danh từ
+
+| Chức năng       | Ví dụ                       |
+| --------------- | --------------------------- |
+| Chủ ngữ         | **Dogs** are loyal.         |
+| Tân ngữ         | I love**music**.            |
+| Bổ ngữ          | He is a**doctor**.          |
+| Tân ngữ giới từ | She is afraid of**snakes**. |
+| Sở hữu          | **John’s** car is red.      |
+
+---
+
+## 7. Danh từ sở hữu (Possessive Nouns)
+
+### Cách dùng:
+
+- Danh từ số ít: **Tom's book**
+- Danh từ số nhiều có "s": **students' classroom**
+- Danh từ số nhiều không "s": **children's toys**
+
+---
+
+## 8. Cụm danh từ (Noun Phrase)
+
+### Cấu trúc chung:
+
+> [Determiner] + [Adjective(s)] + Noun + [Modifier (optional)]
+
+📌 _Ví dụ_:
+
+- **The beautiful old house**
+- **A very interesting book about space**
+
+---
+
+## 9. Collocations thường gặp với danh từ
+
+| Danh từ  | Collocations    | Ví dụ                      |
+| -------- | --------------- | -------------------------- |
+| decision | make a decision | She made a big decision.   |
+| mistake  | make a mistake  | I made a huge mistake.     |
+| effort   | put in effort   | He put in great effort.    |
+| progress | make progress   | You’ve made good progress. |
+| noise    | make noise      | Don’t make too much noise. |
+
+---
+
+## 10. Bài tập thực hành
+
+### Bài 1: Xác định loại danh từ
+
+Gạch chân danh từ và cho biết loại của chúng:
+
+1. **Freedom** is important to everyone.
+2. I saw a **lion** in the zoo.
+3. **She** gave me some good **advice**.
+
+### Bài 2: Viết dạng số nhiều
+
+1. knife → **\_\_**
+2. baby → **\_\_**
+3. man → **\_\_**
+4. book → **\_\_**
+
+### Bài 3: Tạo cụm danh từ
+
+Thêm tính từ và định từ thích hợp cho các danh từ sau:
+
+1. **\_ \_** idea
+2. **\_ \_** house
+3. **\_ \_** teacher
+
+---
+
+**📌 Ghi nhớ:**
+
+- Danh từ là nền tảng trong ngữ pháp.
+- Việc nhận diện và sử dụng đúng danh từ giúp bạn viết và nói chính xác hơn.
+
+---

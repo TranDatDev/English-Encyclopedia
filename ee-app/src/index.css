@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+:root {
+  font-family: Lexend, sans-serif;
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: #1d1c1a;
+  list-style-type: none;
+}
+
+html {
+  /* margin: 0.5vw calc(1rem + 4vw); */
+  background: #faf8f6;
+  scroll-behavior: smooth;
+}
+
+.padding-default {
+  padding: 0.5vw calc(1rem + 12vw);
+}
+
+.margin-default {
+  margin: 0.5vw calc(1rem + 12vw);
+}
+
+* {
+  outline: rgba(255, 0, 0, 0.001) solid 1px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 180, 255, 0.8) transparent;
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 180, 255, 0.4);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 180, 255, 0.6);
+}
+
+h1[id],
+h2[id],
+h3[id],
+h4[id] {
+  scroll-margin-top: 4rem;
+}
