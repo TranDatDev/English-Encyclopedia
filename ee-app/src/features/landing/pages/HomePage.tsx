@@ -1,8 +1,9 @@
 import Card from "@/shared/components/Card";
-import article from "@/shared/markdown/article.md";
 import { Icon } from "@iconify/react";
 import FadeInSection from "@/shared/components/FadeInSection";
-import MarkdownSection from "@/shared/components/MarkdownSection";
+import { posList } from "@/features/pos/routes/route";
+import { activeTenseList } from "@/features/grammar/pages/GrammarPage";
+import CardList from "@/shared/components/CardList";
 const HomePage = () => {
   return (
     <>
@@ -63,6 +64,23 @@ const HomePage = () => {
           </div>
         </section>
       </FadeInSection>
+      <section className="padding-default">
+        <h2 className="text-3xl font-medium mb-4 mt-8">Từ Loại</h2>
+        <CardList
+          items={posList}
+          basePath="/pos"
+          className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+        />
+      </section>
+      <section className="padding-default">
+        <h2 className="text-3xl font-medium mb-4 mt-8">Các Thì (Chủ Động)</h2>
+        <CardList
+          items={activeTenseList}
+          basePath="/grammar"
+          className="grid-cols-1 sm:grid-cols-2 xl:grid-cols-4"
+          subtitle="Thể Chủ Động"
+        />
+      </section>
     </>
   );
 };

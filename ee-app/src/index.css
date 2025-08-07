@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 :root {
-  font-family: Lexend, sans-serif;
+  font-family: Lexend, Inter, sans-serif;
   color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -9,18 +10,55 @@
   list-style-type: none;
 }
 
+body {
+  font-size: clamp(13px, 1.2vw + 14px, 15px);
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: clamp(14px, 1.2vw + 15px, 16px);
+  }
+}
+
 html {
   /* margin: 0.5vw calc(1rem + 4vw); */
   background: #faf8f6;
   scroll-behavior: smooth;
 }
 
+.margin-t-default {
+  margin-top: 5vh !important;
+}
+
 .padding-default {
-  padding: 0.5vw calc(1rem + 12vw);
+  padding: 0.5vw calc(1rem + 2vw);
+}
+
+@media screen and (min-width: 1024px) {
+  .padding-default {
+    padding: 0.5vw calc(2rem + 8vw);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .padding-default {
+    padding: 0.5vw calc(3rem + 14vw);
+  }
 }
 
 .margin-default {
-  margin: 0.5vw calc(1rem + 12vw);
+  margin: 0.5vw calc(1rem + 2vw);
+}
+
+@media screen and (min-width: 1024px) {
+  .margin-default {
+    margin: 0.5vw calc(2rem + 8vw);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .margin-default {
+    margin: 0.5vw calc(3rem + 14vw);
+  }
 }
 
 * {
@@ -58,5 +96,30 @@ h1[id],
 h2[id],
 h3[id],
 h4[id] {
-  scroll-margin-top: 4rem;
+  scroll-margin-top: 8rem;
+}
+
+@media print {
+  body {
+    background: white !important;
+  }
+
+  aside,
+  nav,
+  footer {
+    display: none !important;
+  }
+
+  main {
+    width: 100% !important;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+  }
+  h2:not(:first-of-type) {
+    break-before: page;
+  }
 }

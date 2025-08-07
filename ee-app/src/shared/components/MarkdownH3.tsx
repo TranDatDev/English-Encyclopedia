@@ -7,10 +7,8 @@ export default function MarkdownH1({
   id: string;
 }) {
   return (
-    <FadeInSection duration={500} translate="10px">
-      <h3 id={id} className="text-xl font-semibold text-gray-700 mt-6 mb-3">
-        {children}
-      </h3>
-    </FadeInSection>
+    <h3 id={id} className="text-2xl font-semibold text-gray-700 mt-6 mb-3">
+      {children}
+    </h3>
   );
 }

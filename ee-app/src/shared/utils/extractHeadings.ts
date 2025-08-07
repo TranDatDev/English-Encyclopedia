@@ -20,3 +20,14 @@ export default function extractHeadings(content: string): HeadingItem[] {
   }
   return headings;
 }
+
+export function getTitle(content: string): string {
+  const lines = content.split("\n");
+  for (const line of lines) {
+    const m = line.match(/^#\s+(.*)/);
+    if (m) {
+      return m[1].trim();
+    }
+  }
+  return "Untitled";
+}

@@ -1,4 +1,4 @@
-# TẤT CẢ KIẾN THỨC VỀ ĐỊNH TỪ (DETERMINER) TRONG TIẾNG ANH
+# Định Từ
 
 ## 1. Định nghĩa
 

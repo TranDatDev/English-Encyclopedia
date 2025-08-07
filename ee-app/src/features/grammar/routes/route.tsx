@@ -1,22 +1,22 @@
 // src/features/pos/routes/route.tsx
 import type { RouteObject } from "react-router";
 import MainLayout from "@/shared/layouts/MainLayout";
-import PosPage from "@/features/pos/pages/PosPage";
+import GrammarPage from "@/features/grammar/pages/GrammarPage";
 import MarkdownSection from "@/shared/components/MarkdownSection";
 import { loadMarkdownByFeature } from "@/shared/utils/loadMarkdownFiles";
 
-export const posList = loadMarkdownByFeature("pos");
+export const grammarList = loadMarkdownByFeature("grammar");
 
-export const children: RouteObject[] = posList.map(({ slug, content }) => ({
+export const children: RouteObject[] = grammarList.map(({ slug, content }) => ({
   path: slug,
   element: <MarkdownSection content={content} />,
 }));
 
 // Route chính
-const posRoutes: RouteObject = {
-  path: "pos",
+const grammarRoutes: RouteObject = {
+  path: "grammar",
   element: <MainLayout />,
-  children: [{ index: true, element: <PosPage /> }, ...children],
+  children: [{ index: true, element: <GrammarPage /> }, ...children],
 };
 
-export default posRoutes;
+export default grammarRoutes;

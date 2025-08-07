@@ -1,4 +1,4 @@
-# TẤT CẢ KIẾN THỨC VỀ TÍNH TỪ TRONG TIẾNG ANH
+# Tính Từ
 
 ## 1. Định nghĩa
 
