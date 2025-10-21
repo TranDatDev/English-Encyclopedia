@@ -1,16 +1,20 @@
-import { loadMarkdownByFeature } from "@/shared/utils/loadMarkdownFiles";
-import CardList from "@/shared/components/CardList";
-
-export const activeTenseList = loadMarkdownByFeature("grammar", "tense/active");
+import {
+  activeTenseList,
+  grammarMultipleChoiceExerciseList,
+  grammarPronounceExerciseList,
+  grammarStressExerciseList,
+  passiveTenseList,
+} from "@/features/grammar/routes/list";
+import CardList from "@/shared/components/card/components/CardList";
 
 export default function GrammarPage() {
   return (
     <>
       <title>Ngữ Pháp - English Encyclopedia</title>
-      <div className="margin-default py-10">
+      <div className="margin-x-default py-10">
         {/* Phần giới thiệu */}
-        <div className="max-w-3xl mb-12">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
+        <div className="mb-12 max-w-3xl">
+          <h1 className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
             Ngữ Pháp
           </h1>
           <p className="text-gray-600 sm:text-lg">
@@ -20,9 +24,12 @@ export default function GrammarPage() {
           </p>
         </div>
         <section>
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6">
-            Các Thì Chủ Động
+          <h2 className="mb-6 text-xl font-bold text-gray-800 sm:text-2xl">
+            Các Thì (Tenses)
           </h2>
+          <h3 className="mt-8 mb-2 text-lg font-bold text-gray-800 sm:text-xl">
+            Thể Chủ Động (Active Voice)
+          </h3>
           {/* Danh sách card */}
           <CardList
             items={activeTenseList}
@@ -30,8 +37,62 @@ export default function GrammarPage() {
             className="grid-cols-1 sm:grid-cols-2 xl:grid-cols-4"
             subtitle="Thể Chủ Động"
           />
+          <h3 className="mt-8 mb-2 text-lg font-bold text-gray-800 sm:text-xl">
+            Thể Bị Động (Passive Voice)
+          </h3>
+          <CardList
+            items={passiveTenseList}
+            basePath="/grammar"
+            className="grid-cols-1 sm:grid-cols-2 xl:grid-cols-4"
+            subtitle="Thể Bị Động"
+          />
         </section>
       </div>
+      <section className="margin-x-default py-10">
+        <h2 className="mb-6 text-xl font-bold text-gray-800 sm:text-2xl">
+          Bài tập trắc nghiệm
+        </h2>
+        {/* Danh sách bài tập */}
+        <CardList
+          items={grammarMultipleChoiceExerciseList.map(({ slug, label }) => ({
+            slug,
+            label,
+          }))}
+          basePath="/grammar"
+          className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+          hasImage={false}
+        />
+      </section>
+      <section className="margin-x-default py-10">
+        <h2 className="mb-6 text-xl font-bold text-gray-800 sm:text-2xl">
+          Bài tập trọng âm
+        </h2>
+        {/* Danh sách bài tập */}
+        <CardList
+          items={grammarStressExerciseList.map(({ slug, label }) => ({
+            slug,
+            label,
+          }))}
+          basePath="/grammar"
+          className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+          hasImage={false}
+        />
+      </section>
+      <section className="margin-x-default py-10">
+        <h2 className="mb-6 text-xl font-bold text-gray-800 sm:text-2xl">
+          Bài tập phát âm
+        </h2>
+        {/* Danh sách bài tập */}
+        <CardList
+          items={grammarPronounceExerciseList.map(({ slug, label }) => ({
+            slug,
+            label,
+          }))}
+          basePath="/grammar"
+          className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+          hasImage={false}
+        />
+      </section>
     </>
   );
 }

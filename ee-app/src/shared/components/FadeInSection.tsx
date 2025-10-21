@@ -1,5 +1,5 @@
+import { animated,useSpring } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
-import { useSpring, animated } from "@react-spring/web";
 
 export default function FadeInSection({
   children,

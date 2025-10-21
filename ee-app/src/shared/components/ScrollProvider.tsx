@@ -1,5 +1,5 @@
-import type { PropsWithChildren } from "react";
 import { ReactLenis } from "lenis/react";
+import type { PropsWithChildren } from "react";
 
 export default function ScrollProvider({ children }: PropsWithChildren) {
   return (

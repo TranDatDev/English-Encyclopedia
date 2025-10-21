@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+**/markdown/**/*.md
+**/markdown/**/*.pdf
+**/json/**/*.json
+**/public/**/*.jpg
+**/assets/**/*.jpg

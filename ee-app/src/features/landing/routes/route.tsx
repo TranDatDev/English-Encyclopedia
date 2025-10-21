@@ -1,5 +1,7 @@
 import type { RouteObject } from "react-router";
+
 import MainLayout from "@/shared/layouts/MainLayout";
+
 import HomePage from "../pages/HomePage";
 
 const landingRoutes: RouteObject = {

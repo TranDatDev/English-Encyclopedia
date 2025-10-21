@@ -1,14 +1,35 @@
-import Card from "@/shared/components/Card";
 import { Icon } from "@iconify/react";
-import FadeInSection from "@/shared/components/FadeInSection";
+
+import {
+  aptisEsolListeningList,
+  aptisEsolReadingList,
+  aptisEsolSpeakingList,
+  aptisEsolWritingList,
+} from "@/features/aptis-esol/routes/route";
+import { activeTenseList } from "@/features/grammar/routes/list";
 import { posList } from "@/features/pos/routes/route";
-import { activeTenseList } from "@/features/grammar/pages/GrammarPage";
-import CardList from "@/shared/components/CardList";
+import AutoCarousel from "@/shared/components/AutoCarousel";
+import CardList from "@/shared/components/card/components/CardList";
+import ChatBubbleCard from "@/shared/components/ChatBubbleCard";
+import FadeInSection from "@/shared/components/FadeInSection";
+
 const HomePage = () => {
+  const modules = import.meta.glob(
+    "@/shared/assets/landing/*.{png,jpg,jpeg,webp}",
+    {
+      eager: true,
+    },
+  );
+
+  // modules: Record<string, { default: string }>
+  const imgs: string[] = Object.values(modules).map(
+    (m) => (m as { default: string }).default,
+  );
+  console.log("imgs", imgs);
   return (
     <>
-      <div className="relative padding-default min-h-[50vh] bg-gradient-to-b from-[#68BBE3] to-[#faf8f6] overflow-hidden">
-        <div className="absolute top-20 right-0 w-[300px] h-[300px] bg-[radial-gradient(circle,_rgba(255,165,0,0.7)_0%,_transparent_70%)] pointer-events-none"></div>
+      <div className="padding-x-default relative aspect-[21/9] min-h-[50vh] overflow-hidden bg-gradient-to-b from-[#68BBE3] to-[#68BBE3] py-30">
+        <div className="pointer-events-none absolute top-20 right-0 h-[300px] w-[300px] bg-[radial-gradient(circle,_rgba(255,165,0,0.7)_0%,_transparent_70%)]"></div>
         <FadeInSection>
           <div className="absolute top-50 right-20">
             <div className="flex items-center">
@@ -28,52 +49,76 @@ const HomePage = () => {
           </h1>
         </FadeInSection>
       </div>
+      <div className="padding-x-default flex min-h-screen items-center justify-center bg-gray-50">
+        <AutoCarousel
+          images={imgs}
+          interval={2500}
+          size="w-full aspect-[21/9]"
+          rounded="rounded-3xl"
+        />
+      </div>
+      <div className="padding-x-default flex">
+        <div className="flex flex-1 flex-col items-end justify-end">
+          <ChatBubbleCard
+            title="Xin chào"
+            subtitle="Đây là tin nhắn mẫu"
+            align="right-bottom"
+            children={
+              <>
+                <span>
+                  Đây là nội dung tin nhắn Đây là nội dung tin nhắn Đây là nội
+                  dung tin nhắnĐây là nội dung tin nhắnĐây là nội dung tin
+                  nhắnĐây là nội dung tin nhắn
+                </span>
+              </>
+            }
+          />
+          <ChatBubbleCard
+            title="Xin chào"
+            subtitle="Đây là tin nhắn mẫu"
+            align="right-top"
+            children={
+              <>
+                <span>
+                  Đây là nội dung tin nhắn Đây là nội dung tin nhắn Đây là nội
+                  dung tin nhắnĐây là nội dung tin nhắnĐây là nội dung tin
+                  nhắnĐây là nội dung tin nhắn
+                </span>
+              </>
+            }
+          />
+        </div>
+        <div className="flex flex-1 flex-col">
+          <ChatBubbleCard
+            title="Xin chào"
+            subtitle="Đây là tin nhắn mẫu"
+            align="left-bottom"
+          />
+          <ChatBubbleCard
+            title="Xin chào"
+            subtitle="Đây là tin nhắn mẫu"
+            align="left-top"
+          />
+        </div>
+      </div>
       <FadeInSection>
-        <section className=" padding-default">
-          <h2 className="text-3xl font-medium text-center">
+        <section className="padding-x-default">
+          <h2 className="text-center text-3xl font-medium">
             Bách Khoa Toàn Thư
           </h2>
-          <h2 className="text-4xl font-semibold text-center">Anh Ngữ</h2>
-          <div className="flex gap-4 mt-8">
-            {/* Bên trái: THPTQG */}
-            <Card className="flex-1 bg-gradient-to-b from-[#68BBE3] to-[#faf8f6] flex flex-col justify-center p-6">
-              <h1 className="text-3xl font-extrabold text-[#004b8e]">THPTQG</h1>
-              <p className="text-lg text-[#004b8e] font-medium mt-2">
-                Kỳ thi quan trọng định hướng tương lai
-              </p>
-            </Card>
-
-            {/* Bên phải: IELTS + TOEIC */}
-            <div className="flex-1 flex flex-col gap-4">
-              {/* IELTS */}
-              <Card className="relative flex-1 bg-gradient-to-b from-[#c7002b] to-[#faf8f6] overflow-hidden flex items-end justify-end px-4 py-6">
-                <span className="absolute text-[5rem] font-extrabold text-[#faf8f6] opacity-20 top-3 left-3 pointer-events-none select-none">
-                  IELTS
-                </span>
-                <h1 className="text-2xl font-bold z-10">IELTS</h1>
-              </Card>
-
-              {/* TOEIC */}
-              <Card className="relative flex-1 bg-gradient-to-b from-[#004b8e] to-[#faf8f6] overflow-hidden flex items-end justify-end px-4 py-6">
-                <span className="absolute text-[5rem] font-extrabold text-white opacity-10 top-3 left-3 pointer-events-none select-none">
-                  TOEIC
-                </span>
-                <h1 className="text-2xl font-bold z-10">TOEIC</h1>
-              </Card>
-            </div>
-          </div>
+          <h2 className="text-center text-4xl font-semibold">Anh Ngữ</h2>
         </section>
       </FadeInSection>
-      <section className="padding-default">
-        <h2 className="text-3xl font-medium mb-4 mt-8">Từ Loại</h2>
+      <section className="padding-x-default">
+        <h2 className="mt-8 mb-4 text-3xl font-medium">Từ Loại</h2>
         <CardList
           items={posList}
           basePath="/pos"
           className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
         />
       </section>
-      <section className="padding-default">
-        <h2 className="text-3xl font-medium mb-4 mt-8">Các Thì (Chủ Động)</h2>
+      <section className="padding-x-default">
+        <h2 className="mt-8 mb-4 text-3xl font-medium">Các Thì (Chủ Động)</h2>
         <CardList
           items={activeTenseList}
           basePath="/grammar"
@@ -81,6 +126,40 @@ const HomePage = () => {
           subtitle="Thể Chủ Động"
         />
       </section>
+      <FadeInSection>
+        <section className="padding-x-default">
+          <h2 className="mt-8 mb-4 text-3xl font-medium">Aptis Esol</h2>
+          <CardList
+            items={aptisEsolListeningList}
+            basePath="/aptis-esol"
+            subFolder="listening"
+            className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+          />
+          <CardList
+            items={aptisEsolSpeakingList}
+            basePath="/aptis-esol"
+            subFolder="speaking"
+            className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+          />
+          <CardList
+            items={aptisEsolReadingList}
+            basePath="/aptis-esol"
+            subFolder="reading"
+            className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+          />
+          <CardList
+            items={aptisEsolWritingList}
+            basePath="/aptis-esol"
+            subFolder="writing"
+            className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+          />
+        </section>
+      </FadeInSection>
+      <FadeInSection>
+        <section className="padding-x-default">
+          <h2 className="mt-8 mb-4 text-3xl font-medium">Kết Quả Đánh Giá</h2>
+        </section>
+      </FadeInSection>
     </>
   );
 };
