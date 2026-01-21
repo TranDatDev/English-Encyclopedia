@@ -1,0 +1,17 @@
+{
+  "format": "multiple-choice",
+  "title": "Different Sounds set 2",
+  "sounds": ["/θ/", "/ð/"],
+  "data": [
+    [
+      ["think", "this", "that", "those"],
+      ["/θɪŋk/", "/ðɪs/", "/ðæt/", "/ðəʊz/"],
+      0
+    ],
+    [
+      ["thank", "they", "them", "three"],
+      ["/θæŋk/", "/ðeɪ/", "/ðem/", "/θriː/"],
+      3
+    ]
+  ]
+}

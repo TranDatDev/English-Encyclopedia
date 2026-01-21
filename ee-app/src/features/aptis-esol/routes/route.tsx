@@ -1,10 +1,17 @@
-// src/features/pos/routes/route.tsx
+import { lazy } from "react";
 import type { RouteObject } from "react-router";
 
-import AptisEsolPage from "@/features/aptis-esol/pages/AptisEsolPage";
-import { MarkdownSection } from "@/shared/components/markdown";
-import MainLayout from "@/shared/layouts/MainLayout";
-import { loadMarkdownByFeature } from "@/shared/utils/loaders/loadMarkdownFiles";
+import { loadMarkdownByFeature } from "@/shared/utils/loaders/load-markdown-files";
+
+const AptisEsolPage = lazy(
+  () => import("@/features/aptis-esol/pages/AptisEsolPage"),
+);
+const MarkdownSection = lazy(() =>
+  import("@/shared/components/markdown").then((m) => ({
+    default: m.MarkdownSection,
+  })),
+);
+const MainLayout = lazy(() => import("@/shared/layouts/MainLayout"));
 
 export const aptisEsolReadingList = loadMarkdownByFeature(
   "aptis-esol",
@@ -37,7 +44,6 @@ export const children: RouteObject[] = aptisEsolList.map(
   }),
 );
 
-// Route chính
 const aptisEsolRoutes: RouteObject = {
   path: "aptis-esol",
   element: <MainLayout />,

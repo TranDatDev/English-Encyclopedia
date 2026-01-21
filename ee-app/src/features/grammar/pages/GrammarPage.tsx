@@ -6,6 +6,7 @@ import {
   passiveTenseList,
 } from "@/features/grammar/routes/list";
 import CardList from "@/shared/components/card/components/CardList";
+import { Heading } from "@/shared/components/Heading";
 
 export default function GrammarPage() {
   return (
@@ -14,19 +15,15 @@ export default function GrammarPage() {
       <div className="margin-x-default py-10">
         {/* Phần giới thiệu */}
         <div className="mb-12 max-w-3xl">
-          <h1 className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
-            Ngữ Pháp
-          </h1>
-          <p className="text-gray-600 sm:text-lg">
+          <Heading level={1}>Ngữ Pháp</Heading>
+          <p className="text-black-600 dark:text-white-600 sm:text-lg">
             Ngữ pháp (grammar) là một trong những phần quan trọng nhất trong
             việc học tiếng Anh. Giúp phân loại từ vựng theo chức năng và ý nghĩa
             của chúng trong câu.
           </p>
         </div>
         <section>
-          <h2 className="mb-6 text-xl font-bold text-gray-800 sm:text-2xl">
-            Các Thì (Tenses)
-          </h2>
+          <Heading level={2}>Các Thì (Tenses)</Heading>
           <h3 className="mt-8 mb-2 text-lg font-bold text-gray-800 sm:text-xl">
             Thể Chủ Động (Active Voice)
           </h3>

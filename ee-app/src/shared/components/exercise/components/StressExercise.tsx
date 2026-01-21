@@ -12,14 +12,11 @@ import {
   ExerciseLayoutMain,
   ExerciseLayoutRight,
 } from "@/shared/layouts/ExerciseLayout";
-import type {
-  ExerciseSet,
-  StressExerciseData,
-} from "@/shared/types/exercise.type";
+import type { ExerciseSet, StressData } from "@/shared/types/exercise.type";
 import { shuffleArray } from "@/shared/utils/shuffle";
 
 const StressExercise: React.FC<{
-  exercise: ExerciseSet<StressExerciseData>;
+  exercise: ExerciseSet<StressData>;
   randomize?: boolean;
 }> = ({ exercise, randomize = false }) => {
   const { title, data = [] } = exercise;

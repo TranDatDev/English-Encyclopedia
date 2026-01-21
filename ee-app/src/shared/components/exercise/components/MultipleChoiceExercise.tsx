@@ -11,11 +11,11 @@ import {
 } from "@/shared/layouts/ExerciseLayout";
 import type {
   ExerciseSet,
-  MultipleChoiceExerciseData,
+  MultipleChoiceData,
 } from "@/shared/types/exercise.type";
 
 const MultipleChoiceExercise: React.FC<{
-  exercise?: ExerciseSet<MultipleChoiceExerciseData>;
+  exercise?: ExerciseSet<MultipleChoiceData>;
   randomize?: boolean;
   oneTryOnly?: boolean;
   timerSeconds?: number;

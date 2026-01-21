@@ -1,16 +1,17 @@
 import { posJsonList, posList } from "@/features/pos/routes/route";
 import CardList from "@/shared/components/card/components/CardList";
+import DictionarySearch from "@/shared/components/DictionarySearch";
+import { Heading } from "@/shared/components/Heading";
 
 export default function PosPage() {
   return (
     <>
+      <DictionarySearch className="mb-10" />
       <title>Từ loại - English Encyclopedia</title>
       <div className="margin-x-default py-10">
         {/* Phần giới thiệu */}
         <div className="mb-12 max-w-3xl">
-          <h1 className="mb-4 text-2xl font-bold text-gray-800 sm:text-3xl">
-            Từ loại
-          </h1>
+          <Heading level={1}>Từ Loại (Part of Speech)</Heading>
           <p className="text-gray-600 sm:text-lg">
             Từ loại (part of speech) là một trong những phần quan trọng nhất
             trong ngữ pháp tiếng Anh. Giúp phân loại từ vựng theo chức năng và ý
@@ -18,9 +19,7 @@ export default function PosPage() {
           </p>
         </div>
         <section>
-          <h2 className="mb-6 text-xl font-bold text-gray-800 sm:text-2xl">
-            Danh sách từ loại
-          </h2>
+          <Heading level={2}>Danh Sách Từ Loại</Heading>
           {/* Danh sách card */}
           <CardList
             items={posList}

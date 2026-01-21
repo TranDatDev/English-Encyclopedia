@@ -1,12 +1,12 @@
+import { lazy } from "react";
 import type { RouteObject } from "react-router";
 
-import MainLayout from "@/shared/layouts/MainLayout";
-
-import HomePage from "../pages/HomePage";
+const MainLayout = lazy(() => import("@/shared/layouts/MainLayout"));
+const HomePage = lazy(() => import("@/features/landing/pages/HomePage"));
 
 const landingRoutes: RouteObject = {
   path: "/",
-  element: <MainLayout />, // layout chung toàn app
+  element: <MainLayout />,
   children: [{ index: true, element: <HomePage /> }],
 };
 

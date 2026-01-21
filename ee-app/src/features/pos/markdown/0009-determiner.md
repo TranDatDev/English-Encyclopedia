@@ -1,157 +1,249 @@
-# Định Từ
-
-## 1. Định nghĩa
-
-**Định từ (Determiner)** là từ **đứng trước danh từ** để **giới hạn, xác định, hoặc định lượng** danh từ đó.
-Chúng không bao giờ đứng một mình, luôn đi kèm với **danh từ hoặc cụm danh từ**.
-
-📌 _Ví dụ:_
-
-- **The** book on the table is mine.
-- **Some** students are late.
-- I saw **many** birds.
+# Định từ (Determiners)
 
 ---
 
-## 2. Vị trí của định từ
+## 1. Khái niệm chung
 
-Định từ **luôn đứng trước danh từ**, và **trước tính từ nếu có**.
+**Định từ (Determiners)** là các từ đứng trước danh từ nhằm **giới hạn, xác định, hoặc cung cấp thêm thông tin** về danh từ đó. Chúng không mang nghĩa tự thân mạnh như tính từ; nhiệm vụ chính là giúp người nghe biết **danh từ nào** , **bao nhiêu** , **cái nào** , **thuộc về ai** , hoặc **đã xác định hay chưa** .
 
-📌 _Ví dụ:_
+Vị trí phổ biến:
 
-- a red car → (determiner "a" + adjective "red" + noun "car")
-- some interesting stories → (determiner + adjective + noun)
+- Determiner + (Adjective) + Noun
 
----
+Ví dụ:
 
-## 3. Các loại định từ
-
-### 3.1. Định từ xác định (Definite determiners)
-
-#### a. **Articles (Mạo từ):**
-
-- **the**: xác định (definite article)
-- **a/an**: không xác định (indefinite article)
-
-📌 _Ví dụ:_
-
-- The sun is bright.
-- I saw a cat.
-
-#### b. **Demonstratives (Chỉ định):**
-
-- this, that, these, those
-
-📌 _Ví dụ:_
-
-- This pen is mine.
-- I like those shoes.
-
-#### c. **Possessives (Sở hữu):**
-
-- my, your, his, her, its, our, their
-
-📌 _Ví dụ:_
-
-- My house is new.
-- Their car is fast.
+- **The** big dog
+- **Some** interesting books
+- **My** new laptop
 
 ---
 
-### 3.2. Định từ không xác định (Indefinite determiners)
+## 2. Định từ xác định (Definite Determiners)
 
-- some, any, no, each, every, either, neither
+Nhóm này dùng khi danh từ **đã biết** , **được xác định** , hoặc người nói và người nghe đều hiểu rõ.
 
-📌 _Ví dụ:_
+### 2.1. The
 
-- I have **some** money.
-- **No** students were absent.
-- **Each** person gets a gift.
+Dùng cho danh từ xác định.
 
----
+- Give me **the** keys. (Hai người đều biết chìa khóa nào.)
+- I returned **the** book you lent me.
 
-### 3.3. Định từ chỉ số lượng (Quantifiers)
+### 2.2. This / That / These / Those (Chỉ định)
 
-- much, many, a lot of, plenty of, few, little, several, all, most, enough
+- **This** book is great. (gần)
+- **These** cookies are delicious.
+- **That** man is my teacher. (xa)
+- **Those** ideas are outdated.
 
-📌 _Ví dụ:_
+### 2.3. Possessive Determiners (Định từ sở hữu)
 
-- **Many** people love coffee.
-- She has **little** time.
-- We need **more** chairs.
+my, your, his, her, its, our, their
 
-#### ✅ Ghi nhớ:
+- **My** phone
+- **Their** plan is ambitious.
 
-| Sử dụng với            | Các định từ                     |
-| ---------------------- | ------------------------------- |
-| Danh từ đếm được       | many, a few, several            |
-| Danh từ không đếm được | much, a little                  |
-| Cả hai                 | some, any, a lot of, no, enough |
+### 2.4. Wh-determiners
 
----
+which, whose
 
-### 3.4. Định từ nghi vấn (Interrogative determiners)
-
-- **what, which, whose** (khi đứng trước danh từ)
-
-📌 _Ví dụ:_
-
-- **What** books do you like?
+- **Which** color do you prefer?
 - **Whose** jacket is this?
 
 ---
 
-### 3.5. Định từ phân phối (Distributive determiners)
+## 3. Định từ vô định (Indefinite Determiners)
 
-- each, every, either, neither
+Dùng khi danh từ **chưa được xác định** , hoặc nói chung chung.
 
-📌 _Ví dụ:_
+### 3.1. A / An
 
-- **Each** student must participate.
-- **Neither** answer is correct.
+Dùng với danh từ số ít chưa xác định.
 
----
+- I bought **a** pen.
+- She saw **an** owl.
 
-## 4. Thứ tự kết hợp định từ
+### 3.2. Some / Any
 
-Một danh từ **chỉ nên có một định từ chính**, nhưng trong một số trường hợp đặc biệt, có thể kết hợp **determiner + quantifier + adjective + noun**.
+- **Some** thường dùng trong câu khẳng định hoặc lời mời/đề nghị.
+  - I need **some** information.
+- **Any** dùng trong câu phủ định hoặc nghi vấn.
+  - Do you have **any** questions?
 
-📌 _Ví dụ:_
+### 3.3. Another / Other / Others
 
-- All the beautiful flowers
-- Some of my friends
+- **Another** = thêm một (số ít)
+  - I need **another** cup.
+- **Other** = cái khác (số nhiều hoặc không đếm được)
+  - **Other** students joined the class.
+- **Others** = những người/ vật khác (không có danh từ sau)
+  - Some passed, **others** failed.
 
----
+### 3.4. Many / Much / Few / Little
 
-## 5. Phân biệt một số cặp dễ nhầm
+- **Many** friends (đếm được)
+- **Much** water (không đếm được)
+- **Few** options (ít, mang nghĩa tiêu cực)
+- **Little** time (ít, mang nghĩa tiêu cực)
 
-| Cặp từ                      | Phân biệt                                                |
-| --------------------------- | -------------------------------------------------------- |
-| **much** vs. **many**       | much → không đếm được; many → đếm được                   |
-| **few** vs. **a few**       | few → gần như không; a few → một vài (tích cực hơn)      |
-| **little** vs. **a little** | giống như trên nhưng cho danh từ không đếm được          |
-| **each** vs. **every**      | each → từng cái riêng biệt; every → toàn bộ nhóm         |
-| **some** vs. **any**        | some → câu khẳng định, lời mời; any → phủ định, nghi vấn |
+### 3.5. Several / Various
 
----
-
-## 6. Một số cấu trúc phổ biến
-
-| Cấu trúc                           | Ví dụ                      |
-| ---------------------------------- | -------------------------- |
-| some + danh từ                     | I need some help.          |
-| any + danh từ (phủ định, nghi vấn) | Do you have any questions? |
-| no + danh từ                       | No food was left.          |
-| each + danh từ số ít               | Each student has a book.   |
-| all + danh từ số nhiều             | All teachers are kind.     |
+- **Several** issues need solving.
+- **Various** reasons were given.
 
 ---
 
-## 7. Bài tập thực hành
+## 4. Định từ số lượng (Quantifiers)
 
-### A. Điền định từ thích hợp:
+Bao gồm **số từ (Cardinal Numbers)** và **lượng từ (Quantifiers)** .
 
-1. I don’t have \_\_\_ money. (some/any)
-2. \_\_\_ students in this class are from Hanoi. (All/Each)
-3. \_\_\_ of you is responsible for this. (Each/Every)
-4. \_\_\_ shoes are yours? (What/Which)
+---
+
+### 4.1. Số từ (Cardinal Numbers)
+
+Dùng để nói số lượng cụ thể.
+
+- **One** student
+- **Two** cars
+- **Twenty** ideas
+
+Kết hợp:
+
+- **Three** beautiful houses
+- **Five** of the members
+
+---
+
+### 4.2. Lượng từ (Quantifiers)
+
+Thông báo mức độ, số lượng không cụ thể.
+
+#### (1) Dùng cho danh từ đếm được
+
+- many
+- a few
+- several
+- a number of
+- plenty of
+
+Ví dụ:
+
+- There are **many** problems to fix.
+- We have **a few** minutes left.
+
+#### (2) Dùng cho danh từ không đếm được
+
+- much
+- a little
+- a bit of
+
+Ví dụ:
+
+- There isn't **much** sugar.
+- I need **a little** help.
+
+#### (3) Dùng cho cả hai loại danh từ
+
+- some
+- any
+- a lot of / lots of
+- enough
+- more / most
+- all
+- no
+
+Ví dụ:
+
+- **A lot of** students came. / **A lot of** water spilled.
+- **No** ideas were accepted.
+
+---
+
+## 5. Định từ phân phối (Distributive Determiners)
+
+Dùng để nói về từng cá nhân trong một nhóm.
+
+Các từ: each, every, either, neither
+
+### 5.1. Each
+
+Nhấn mạnh từng phần tử.
+
+- **Each** student has a locker.
+
+### 5.2. Every
+
+Nhấn mạnh tổng thể, mang ý nghĩa toàn bộ.
+
+- **Every** class is important.
+
+### 5.3. Either / Neither
+
+- **Either** option is fine. (một trong hai)
+- **Neither** answer is correct. (không cái nào)
+
+---
+
+## 6. Định từ tổng quát (General Determiners)
+
+Nhóm này bao gồm: some, any, enough, no
+
+- **No** money was wasted.
+- We have **enough** resources.
+
+---
+
+## 7. Định từ định lượng kiểu đặc biệt
+
+### 7.1. Half / Both / All
+
+Có thể đi trước hoặc sau mạo từ:
+
+- **All the** students
+- **Both the** cars
+- **Half the** time
+
+Hoặc đứng một mình:
+
+- **All** students
+- **Both** cars
+
+### 7.2. Partitives (mẫu chia phần)
+
+bits of, pieces of, slices of, cups of
+
+- **A piece of** advice
+- **A slice of** pizza
+
+---
+
+## 8. Thứ tự nhiều định từ (Order of Determiners)
+
+Khi có nhiều định từ đứng cùng nhau, thứ tự thông thường:
+
+1. **Determiner chính** (this, my, some...)
+2. **Số từ** (one, two…)
+3. **Lượng từ bổ sung nếu có**
+
+Ví dụ:
+
+- **All** my three brothers
+- **These** two big houses
+
+---
+
+## 9. Bài tập ứng dụng (tham khảo nhanh)
+
+### Bài 1: Điền định từ đúng
+
+1. I don’t have \_\_\_ money left.
+2. \_\_\_ of my friends are here.
+3. She bought \_\_\_ new laptop.
+4. \_\_\_ option is acceptable.
+5. There are \_\_\_ reasons to try again.
+
+### Bài 2: Sửa lỗi sai
+
+1. I have much friends.
+2. This two ideas are interesting.
+3. Every of them is ready.

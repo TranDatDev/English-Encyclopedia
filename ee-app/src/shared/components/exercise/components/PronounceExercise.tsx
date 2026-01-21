@@ -12,14 +12,11 @@ import {
   ExerciseLayoutMain,
   ExerciseLayoutRight,
 } from "@/shared/layouts/ExerciseLayout";
-import type {
-  ExerciseSet,
-  PronounceExerciseData,
-} from "@/shared/types/exercise.type";
+import type { ExerciseSet, PronounceData } from "@/shared/types/exercise.type";
 import { shuffleArray } from "@/shared/utils/shuffle";
 
 const PronounceExercise: React.FC<{
-  exercise: ExerciseSet<PronounceExerciseData>;
+  exercise: ExerciseSet<PronounceData>;
   randomize?: boolean;
 }> = ({ exercise, randomize = false }) => {
   const { title, data = [] } = exercise;
@@ -72,94 +69,107 @@ const PronounceExercise: React.FC<{
       </ExerciseLayoutLeft>
 
       <ExerciseLayoutMain>
-        {shuffledData.map(
-          ([words, ipaList, correctIndex, explanation], qIndex) => {
-            const userChose =
-              answers[qIndex] !== null && answers[qIndex] !== undefined;
+        <h1 className="pb-8 text-xl font-bold italic dark:text-white">
+          Choose the word whose underlined part is pronounced differently from
+          that of the others by clicking the corresponding letter A, B, C, or D.
+        </h1>
+        <section className="bg-white-900 dark:bg-black-900 border-black-100 dark:border-white-100 mb-8 rounded-lg border py-4 shadow-lg dark:text-white">
+          {shuffledData.map(
+            ([words, ipaList, correctIndex, explanation], qIndex) => {
+              const userChose =
+                answers[qIndex] !== null && answers[qIndex] !== undefined;
 
-            return (
-              <section
-                key={qIndex}
-                id={`question-${qIndex + 1}`}
-                className="mb-8 flex flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-md"
-              >
-                <h2 className="mb-4 font-semibold text-gray-800">
-                  {qIndex + 1}. Chọn từ có phát âm khác:
-                </h2>
+              return (
+                <section className="p-2 lg:p-8">
+                  <div
+                    key={qIndex}
+                    id={`question-${qIndex + 1}`}
+                    className="flex items-center justify-between"
+                  >
+                    <h2 className="text-black-800 dark:text-white-800 py-4 font-semibold lg:p-0">
+                      {qIndex + 1}.
+                    </h2>
 
-                <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-                  {words.map((word, i) => {
-                    const isSelected = answers[qIndex] === i;
-                    const isCorrect = i === correctIndex;
+                    <div className="grid w-full grid-cols-2 gap-2 lg:grid-cols-4">
+                      {words.map((word, i) => {
+                        const isSelected = answers[qIndex] === i;
+                        const isCorrect = i === correctIndex;
 
-                    return (
-                      <div className="flex w-full flex-col" key={i}>
-                        <button
-                          onClick={() => {
-                            const newAns = [...answers];
-                            newAns[qIndex] = i;
-                            setAnswers(newAns);
-                          }}
-                          className={`flex cursor-pointer flex-col items-center rounded-lg border px-4 py-3 font-medium transition ${
-                            isSelected
-                              ? isCorrect
-                                ? "bg-green-500 text-white"
-                                : "bg-red-500 text-white"
-                              : "border-gray-400 bg-white hover:bg-gray-100"
-                          }`}
-                        >
-                          <span>
-                            {optionLabels[i]}.{" "}
-                            {word.split(/(_[^_]+_)/g).map((part, j) =>
-                              part.startsWith("_") && part.endsWith("_") ? (
-                                <span key={j} className="font-bold underline">
-                                  {part.slice(1, -1)}
-                                </span>
-                              ) : (
-                                <span key={j}>{part}</span>
-                              ),
+                        return (
+                          <div className="flex flex-col px-4" key={i}>
+                            <button
+                              onClick={() => {
+                                const newAns = [...answers];
+                                newAns[qIndex] = i;
+                                setAnswers(newAns);
+                              }}
+                              className={`flex cursor-pointer flex-col items-center rounded-lg border px-4 py-3 font-medium transition ${
+                                isSelected
+                                  ? isCorrect
+                                    ? "text-white-900 dark:text-black-900 bg-green-500"
+                                    : "bg-red-500 text-white dark:text-black"
+                                  : "bg-white-900 dark:bg-black-900 dark:hover:bg-black-800 border-gray-400 hover:bg-white"
+                              }`}
+                            >
+                              <span>
+                                {optionLabels[i]}.{" "}
+                                {word.split(/(_[^_]+_)/g).map((part, j) =>
+                                  part.startsWith("_") && part.endsWith("_") ? (
+                                    <span
+                                      key={j}
+                                      className="font-bold underline"
+                                    >
+                                      {part.slice(1, -1)}
+                                    </span>
+                                  ) : (
+                                    <span key={j}>{part}</span>
+                                  ),
+                                )}
+                              </span>
+                              {userChose && (
+                                <p className="mt-1 text-sm text-gray-700 italic">
+                                  {ipaList[i]}
+                                </p>
+                              )}
+                            </button>
+
+                            {userChose && (
+                              <div className="mx-auto mt-2">
+                                <ExerciseSimpleSpeak
+                                  text={words[i].replace(/_/g, "")}
+                                  volume={volume}
+                                  rate={rate}
+                                  preference={preference}
+                                />
+                              </div>
                             )}
-                          </span>
-                          {userChose && (
-                            <p className="mt-1 text-sm text-gray-700 italic">
-                              {ipaList[i]}
-                            </p>
-                          )}
-                        </button>
-
-                        {userChose && (
-                          <div className="mx-auto mt-2">
-                            <ExerciseSimpleSpeak
-                              text={words[i].replace(/_/g, "")}
-                              volume={volume}
-                              rate={rate}
-                              preference={preference}
-                            />
                           </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {userChose && (
-                  <div className="mt-4">
-                    <p className="font-semibold text-gray-800">
-                      Đáp án đúng: {optionLabels[correctIndex]} —{" "}
-                      {words[correctIndex]}
-                    </p>
-                    <p className="mt-1 text-sm text-gray-700 italic">
-                      {ipaList[correctIndex]}
-                    </p>
-                    {explanation && (
-                      <p className="mt-3 text-gray-700 italic">{explanation}</p>
-                    )}
+                        );
+                      })}
+                    </div>
                   </div>
-                )}
-              </section>
-            );
-          },
-        )}
+
+                  {userChose && (
+                    <div className="text-center">
+                      <span className="mx-4 font-semibold text-gray-800">
+                        Đáp án đúng: {optionLabels[correctIndex]} —{" "}
+                        {words[correctIndex]}
+                      </span>
+                      <span className="mx-4 mt-1 text-sm text-gray-700 italic">
+                        {ipaList[correctIndex]}
+                      </span>
+                      {explanation && (
+                        <span className="mx-4 mt-3 text-gray-700 italic">
+                          {explanation}, khác với các từ còn lại.
+                        </span>
+                      )}
+                    </div>
+                  )}
+                </section>
+              );
+            },
+          )}
+        </section>
       </ExerciseLayoutMain>
       <ExerciseLayoutRight>
         <ExerciseSummary

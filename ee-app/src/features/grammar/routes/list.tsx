@@ -3,8 +3,8 @@ import type {
   PronounceExerciseSet,
   StressExerciseSet,
 } from "@/shared/types/exercise.type";
-import { loadJsonByFeature } from "@/shared/utils/loaders/loadJsonFiles";
-import { loadMarkdownByFeature } from "@/shared/utils/loaders/loadMarkdownFiles";
+import { loadJsonByFeature } from "@/shared/utils/loaders/load-json-files";
+import { loadMarkdownByFeature } from "@/shared/utils/loaders/load-markdown-files";
 
 export const grammarList = loadMarkdownByFeature("grammar");
 

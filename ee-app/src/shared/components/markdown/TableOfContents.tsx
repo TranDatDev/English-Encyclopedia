@@ -20,10 +20,10 @@ function TOCToggleButton({
   setOpen: (o: boolean) => void;
 }) {
   return (
-    <div className="hidden md:block fixed bottom-8 right-8 z-50">
+    <div className="fixed right-8 bottom-8 z-50 hidden md:block">
       <button
         onClick={() => setOpen(!open)}
-        className="bg-blue-200 border border-gray-300 px-4 py-2 rounded-md font-medium"
+        className="rounded-md border border-gray-300 bg-blue-200 px-4 py-2 font-medium"
       >
         {open ? "Tắt Mục Lục" : "Mở Mục Lục"}
       </button>
@@ -51,16 +51,16 @@ export default function TableOfContents({
 
       <aside
         className={clsx(
-          "hidden md:block sticky top-40 h-full transition-all duration-300 bg-white",
-          open ? "w-4/12 ml-8" : "w-0"
+          "sticky top-40 hidden h-full transition-all duration-300 md:block",
+          open ? "ml-8 w-4/12" : "w-0",
         )}
       >
         <nav
           className={clsx(
             "space-y-1 border-r-2 border-gray-300 text-sm leading-relaxed transition-opacity duration-300",
             open
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
+              ? "pointer-events-auto opacity-100"
+              : "pointer-events-none opacity-0",
           )}
         >
           {headings.map(({ id, text, level }) => (

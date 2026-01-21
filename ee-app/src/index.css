@@ -1,7 +1,14 @@
+/* Phông chữ */
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Thiết lập root */
 :root {
-  font-family: Lexend, Inter, sans-serif;
+  font-family:
+    Inter Tight,
+    Inter,
+    sans-serif;
   color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -10,10 +17,7 @@
   list-style-type: none;
 }
 
-/* * {
-  border: hsla(0, 100%, 50%, 0.6) solid 1px;
-} */
-
+/* Cỡ chữ thân trang */
 body {
   font-size: clamp(13px, 1.2vw + 14px, 15px);
 }
@@ -23,114 +27,105 @@ body {
   }
 }
 
+/* HTML và dark mode */
 html {
-  /* margin: 0.5vw calc(1rem + 4vw); */
   background: #faf8f6;
   scroll-behavior: smooth;
+
+  .dark {
+    background: #121212;
+  }
+}
+html .dark {
+  background: #121212;
 }
 
+/* Tiện ích layout */
 .margin-t-default {
   margin-top: 5vh !important;
 }
-
 .padding-x-default {
-  padding-left: calc(1rem + 2vw);
-  padding-right: calc(1rem + 2vw);
+  padding-left: calc(1rem + 1vw);
+  padding-right: calc(1rem + 1vw);
 }
-
 @media screen and (min-width: 1024px) {
   .padding-x-default {
-    padding-left: calc(2rem + 8vw);
-    padding-right: calc(2rem + 8vw);
+    padding-left: calc(2rem + 4vw);
+    padding-right: calc(2rem + 4vw);
   }
 }
-
 @media screen and (min-width: 1280px) {
   .padding-x-default {
-    padding-left: calc(3rem + 14vw);
-    padding-right: calc(3rem + 14vw);
+    padding-left: calc(3rem + 8vw);
+    padding-right: calc(3rem + 8vw);
   }
 }
 
 .margin-x-default {
-  margin-left: calc(1rem + 2vw);
-  margin-right: calc(1rem + 2vw);
+  margin-left: calc(1rem + 1vw);
+  margin-right: calc(1rem + 1vw);
 }
-
 @media screen and (min-width: 1024px) {
   .margin-x-default {
-    margin-left: calc(2rem + 8vw);
-    margin-right: calc(2rem + 8vw);
+    margin-left: calc(2rem + 4vw);
+    margin-right: calc(2rem + 4vw);
   }
 }
-
 @media screen and (min-width: 1280px) {
   .margin-x-default {
-    margin-left: calc(3rem + 14vw);
-    margin-right: calc(3rem + 14vw);
+    margin-left: calc(3rem + 8vw);
+    margin-right: calc(3rem + 8vw);
   }
 }
 
-* {
-  /* outline: rgba(255, 0, 0, 0.001) solid 1px; */
-  letter-spacing: -0.025em;
-}
-
-/* Firefox */
+/* Thanh cuộn */
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(100, 180, 255, 0.8) transparent;
 }
-
-/* Chrome, Edge, Safari */
 *::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
-
 *::-webkit-scrollbar-track {
   background: transparent;
 }
-
 *::-webkit-scrollbar-thumb {
   background-color: rgba(100, 180, 255, 0.4);
   border-radius: 9999px;
   border: 2px solid transparent;
   background-clip: content-box;
 }
-
 *::-webkit-scrollbar-thumb:hover {
   background-color: rgba(100, 180, 255, 0.6);
 }
 
+/* Khoảng trễ khi cuộn tới anchor */
 h1[id],
 h2[id],
 h3[id],
 h4[id] {
   scroll-margin-top: 8rem !important;
 }
-
 div[id],
 section[id] {
   scroll-margin-top: 12rem !important;
 }
 
+/* Quy tắc khi in */
 @media print {
   body {
     background: white !important;
   }
-
   aside,
   nav,
   footer {
     display: none !important;
   }
-
   main {
     width: 100% !important;
   }
 }
-
 @media print {
   @page {
     size: A4;
@@ -140,28 +135,31 @@ section[id] {
   }
 }
 
+/* Sửa kiểu blockquote */
 .prose blockquote p::before,
 .prose blockquote p::after {
   content: none !important;
 }
 
+/* Tối ưu cuộn mượt Lenis */
 html.lenis,
 html.lenis body {
   height: auto;
 }
-
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }
-
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
-
 .lenis.lenis-stopped {
   overflow: hidden;
 }
-
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+/* Góc bo squircle */
+.corner-squircle {
+  corner-shape: squircle;
 }

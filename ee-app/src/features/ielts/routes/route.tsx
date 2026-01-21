@@ -6,8 +6,8 @@ import { JsonSection } from "@/shared/components/json";
 import { MarkdownSection } from "@/shared/components/markdown";
 import MainLayout from "@/shared/layouts/MainLayout";
 import type { QuizDataCompact } from "@/shared/types/quiz.type";
-import { loadJsonByFeature } from "@/shared/utils/loaders/loadJsonFiles";
-import { loadMarkdownByFeature } from "@/shared/utils/loaders/loadMarkdownFiles";
+import { loadJsonByFeature } from "@/shared/utils/loaders/load-json-files";
+import { loadMarkdownByFeature } from "@/shared/utils/loaders/load-markdown-files";
 
 export const ieltsListeningList = loadMarkdownByFeature("ielts", "listening");
 export const ieltsReadingList = loadMarkdownByFeature("ielts", "reading");

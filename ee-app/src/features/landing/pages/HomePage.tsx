@@ -1,17 +1,9 @@
-import { Icon } from "@iconify/react";
+import eeLogo from "@shared/assets/EE_logo.svg";
 
-import {
-  aptisEsolListeningList,
-  aptisEsolReadingList,
-  aptisEsolSpeakingList,
-  aptisEsolWritingList,
-} from "@/features/aptis-esol/routes/route";
-import { activeTenseList } from "@/features/grammar/routes/list";
-import { posList } from "@/features/pos/routes/route";
 import AutoCarousel from "@/shared/components/AutoCarousel";
-import CardList from "@/shared/components/card/components/CardList";
-import ChatBubbleCard from "@/shared/components/ChatBubbleCard";
+import BinaryTestComponent from "@/shared/components/BinaryTestComponent";
 import FadeInSection from "@/shared/components/FadeInSection";
+import ShinyText from "@/shared/components/ShinyText";
 
 const HomePage = () => {
   const modules = import.meta.glob(
@@ -25,28 +17,55 @@ const HomePage = () => {
   const imgs: string[] = Object.values(modules).map(
     (m) => (m as { default: string }).default,
   );
-  console.log("imgs", imgs);
   return (
     <>
-      <div className="padding-x-default relative aspect-[21/9] min-h-[50vh] overflow-hidden bg-gradient-to-b from-[#68BBE3] to-[#68BBE3] py-30">
-        <div className="pointer-events-none absolute top-20 right-0 h-[300px] w-[300px] bg-[radial-gradient(circle,_rgba(255,165,0,0.7)_0%,_transparent_70%)]"></div>
-        <FadeInSection>
-          <div className="absolute top-50 right-20">
-            <div className="flex items-center">
-              <Icon icon="mingcute:wave-line" width={35} />
-              <Icon icon="mdi:bird" width={50} />
+      <div className="padding-x-default relative flex h-[100vh] justify-between overflow-visible py-30">
+        <img
+          src={eeLogo}
+          alt="Logo"
+          className="absolute left-1/2 h-auto w-8 -translate-x-1/2 object-contain opacity-85 dark:invert-100"
+        />
+        <FadeInSection className="flex-1">
+          <h1 className="text-contrast-700 mt-4 text-center text-8xl font-semibold">
+            <span className="text-6xl font-normal">English</span> <br />
+            Encyclopedia
+          </h1>
+          <div className="text-blackwhite-950"></div>
+          <div className="text-black-700 dark:text-white-700 mt-16 flex justify-between gap-8 px-64">
+            <div className="bg-contrast-800 flex aspect-square flex-1 flex-col justify-between rounded-lg border-4 p-8">
+              <p className="text-3xl font-semibold">Ngữ Pháp</p>
+              <p className="text-right text-6xl font-semibold">
+                <ShinyText
+                  text="20+"
+                  disabled={false}
+                  speed={2}
+                  className="text-[hsla(0,0%,20%,1)] dark:text-[hsla(0,0%,100%,0.7)]"
+                />
+              </p>
             </div>
-            <div className="flex">
-              <Icon icon="mynaui:cloud-solid" color="white" width={200} />
-              <Icon icon="mynaui:cloud-solid" color="white" width={100} />
+            <div className="bg-contrast-800 flex aspect-square flex-1 flex-col justify-between rounded-lg border-4 p-8">
+              <p className="text-3xl font-semibold">Bài Tập</p>
+              <p className="text-contrast-700 text-right text-6xl font-semibold">
+                <ShinyText
+                  text="200+"
+                  disabled={false}
+                  speed={2}
+                  className="text-[hsla(0,0%,20%,1)] dark:text-[hsla(0,0%,100%,0.7)]"
+                />
+              </p>
+            </div>
+            <div className="bg-contrast-800 flex aspect-square flex-1 flex-col justify-between rounded-lg border-4 p-8">
+              <p className="text-3xl font-semibold">Từ Vựng</p>
+              <p className="text-contrast-700 text-right text-6xl font-semibold">
+                <ShinyText
+                  text="2000+"
+                  disabled={false}
+                  speed={2}
+                  className="text-[hsla(0,0%,20%,1)] dark:text-[hsla(0,0%,100%,0.7)]"
+                />
+              </p>
             </div>
           </div>
-        </FadeInSection>
-        <FadeInSection>
-          <h1 className="mt-4 text-5xl font-bold">English Encyclopedia</h1>
-          <h1 className="mt-4 text-3xl font-bold">
-            Ôn luyện kiến thức tiếng anh
-          </h1>
         </FadeInSection>
       </div>
       <div className="padding-x-default flex min-h-screen items-center justify-center bg-gray-50">
@@ -57,109 +76,41 @@ const HomePage = () => {
           rounded="rounded-3xl"
         />
       </div>
-      <div className="padding-x-default flex">
-        <div className="flex flex-1 flex-col items-end justify-end">
-          <ChatBubbleCard
-            title="Xin chào"
-            subtitle="Đây là tin nhắn mẫu"
-            align="right-bottom"
-            children={
-              <>
-                <span>
-                  Đây là nội dung tin nhắn Đây là nội dung tin nhắn Đây là nội
-                  dung tin nhắnĐây là nội dung tin nhắnĐây là nội dung tin
-                  nhắnĐây là nội dung tin nhắn
-                </span>
-              </>
-            }
-          />
-          <ChatBubbleCard
-            title="Xin chào"
-            subtitle="Đây là tin nhắn mẫu"
-            align="right-top"
-            children={
-              <>
-                <span>
-                  Đây là nội dung tin nhắn Đây là nội dung tin nhắn Đây là nội
-                  dung tin nhắnĐây là nội dung tin nhắnĐây là nội dung tin
-                  nhắnĐây là nội dung tin nhắn
-                </span>
-              </>
-            }
-          />
+      <div className="bg-contrast-800 relative w-64 overflow-visible rounded-[30px] p-6 shadow-md">
+        {/* Ribbon */}
+        tsx
+        <div className="absolute top-6 -right-4">
+          <div className="relative inline-block bg-teal-600 px-5 py-1.5 text-sm font-bold text-white shadow-lg">
+            A1
+            {/* Tam giác nhỏ ở góc dưới bên PHẢI - giữ nguyên clip-path cũ */}
+            <span className="absolute right-0 bottom-0 h-4 w-4 translate-y-full bg-teal-700 [clip-path:polygon(0_0,0_100%,100%_0)]" />
+          </div>
         </div>
-        <div className="flex flex-1 flex-col">
-          <ChatBubbleCard
-            title="Xin chào"
-            subtitle="Đây là tin nhắn mẫu"
-            align="left-bottom"
-          />
-          <ChatBubbleCard
-            title="Xin chào"
-            subtitle="Đây là tin nhắn mẫu"
-            align="left-top"
-          />
-        </div>
+        <h2 className="text-contrast-800 mb-4 text-2xl font-semibold">
+          Premium
+        </h2>
+        <ul className="space-y-3 text-gray-600">
+          <li className="flex items-center gap-2">
+            <span className="text-teal-500">✔</span> Sample Text Here
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-teal-500">✔</span> Other Text Title
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-teal-500">✔</span> Text Space Goes Here
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-teal-500">✔</span> Description Space
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-teal-500">✔</span> Sample Text Here
+          </li>
+        </ul>
+        <button className="mt-6 rounded-md bg-teal-600 px-6 py-2 text-white">
+          Select
+        </button>
       </div>
-      <FadeInSection>
-        <section className="padding-x-default">
-          <h2 className="text-center text-3xl font-medium">
-            Bách Khoa Toàn Thư
-          </h2>
-          <h2 className="text-center text-4xl font-semibold">Anh Ngữ</h2>
-        </section>
-      </FadeInSection>
-      <section className="padding-x-default">
-        <h2 className="mt-8 mb-4 text-3xl font-medium">Từ Loại</h2>
-        <CardList
-          items={posList}
-          basePath="/pos"
-          className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
-        />
-      </section>
-      <section className="padding-x-default">
-        <h2 className="mt-8 mb-4 text-3xl font-medium">Các Thì (Chủ Động)</h2>
-        <CardList
-          items={activeTenseList}
-          basePath="/grammar"
-          className="grid-cols-1 sm:grid-cols-2 xl:grid-cols-4"
-          subtitle="Thể Chủ Động"
-        />
-      </section>
-      <FadeInSection>
-        <section className="padding-x-default">
-          <h2 className="mt-8 mb-4 text-3xl font-medium">Aptis Esol</h2>
-          <CardList
-            items={aptisEsolListeningList}
-            basePath="/aptis-esol"
-            subFolder="listening"
-            className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-          />
-          <CardList
-            items={aptisEsolSpeakingList}
-            basePath="/aptis-esol"
-            subFolder="speaking"
-            className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-          />
-          <CardList
-            items={aptisEsolReadingList}
-            basePath="/aptis-esol"
-            subFolder="reading"
-            className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-          />
-          <CardList
-            items={aptisEsolWritingList}
-            basePath="/aptis-esol"
-            subFolder="writing"
-            className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-          />
-        </section>
-      </FadeInSection>
-      <FadeInSection>
-        <section className="padding-x-default">
-          <h2 className="mt-8 mb-4 text-3xl font-medium">Kết Quả Đánh Giá</h2>
-        </section>
-      </FadeInSection>
+      <BinaryTestComponent />
     </>
   );
 };

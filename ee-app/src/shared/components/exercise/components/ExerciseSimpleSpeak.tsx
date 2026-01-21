@@ -17,7 +17,6 @@ export const ExerciseSimpleSpeak: React.FC<ExerciseSimpleSpeakProps> = ({
   const synth = window.speechSynthesis;
   const [voice, setVoice] = useState<SpeechSynthesisVoice | null>(null);
   const [ready, setReady] = useState(false);
-  console.log("Current preference:", preference);
 
   // Load danh sách voice
   useEffect(() => {

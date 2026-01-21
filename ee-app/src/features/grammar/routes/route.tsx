@@ -1,18 +1,32 @@
+import { lazy } from "react";
 import type { RouteObject } from "react-router";
 
-import GrammarPage from "@/features/grammar/pages/GrammarPage";
 import {
   grammarList,
   grammarMultipleChoiceExerciseList,
   grammarPronounceExerciseList,
   grammarStressExerciseList,
 } from "@/features/grammar/routes/list";
-import MultipleChoiceExercise from "@/shared/components/exercise/components/MultipleChoiceExercise";
-import PronounceExercise from "@/shared/components/exercise/components/PronounceExercise";
-import StressExercise from "@/shared/components/exercise/components/StressExercise";
-import { MarkdownSection } from "@/shared/components/markdown";
-import MainLayout from "@/shared/layouts/MainLayout";
 import { createExerciseRoutes } from "@/shared/routes/CreateExerciseRoutes";
+
+const GrammarPage = lazy(() => import("@/features/grammar/pages/GrammarPage"));
+const MultipleChoiceExercise = lazy(
+  () =>
+    import("@/shared/components/exercise/components/MultipleChoiceExercise"),
+);
+const PronounceExercise = lazy(
+  () => import("@/shared/components/exercise/components/PronounceExercise"),
+);
+const StressExercise = lazy(
+  () => import("@/shared/components/exercise/components/StressExercise"),
+);
+const MarkdownSection = lazy(() =>
+  import("@/shared/components/markdown").then((m) => ({
+    default: m.MarkdownSection,
+  })),
+);
+const MainLayout = lazy(() => import("@/shared/layouts/MainLayout"));
+
 
 export const childrenMultipleChoiceExercise = createExerciseRoutes(
   grammarMultipleChoiceExerciseList,
@@ -37,7 +51,8 @@ export const children: RouteObject[] = grammarList.map(({ slug, content }) => ({
   element: <MarkdownSection content={content} />,
 }));
 
-// Route chính
+// --------------------------------------------------------------------
+
 const grammarRoutes: RouteObject = {
   path: "grammar",
   element: <MainLayout />,

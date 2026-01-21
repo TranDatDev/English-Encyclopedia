@@ -47,8 +47,8 @@ export const Card: React.FC<CardProps> = ({
       <Link
         to={linkPath}
         className={clsx(
-          "group block h-full overflow-hidden rounded-t-xl bg-white shadow-lg transition-transform duration-200",
-          "hover:scale-[1.075] hover:shadow-2xl",
+          "group bg-white-950 dark:bg-black-950 block h-full overflow-hidden rounded-t-xl shadow-lg transition-transform duration-200",
+          "dark: hover:dark:shadow-black-800 hover:scale-[1.075] hover:shadow-2xl",
         )}
       >
         {hasImage && <CardImage src={imagePath} alt={label} />}
@@ -67,7 +67,7 @@ const CardImage = ({ src, alt }: { src: string; alt: string }) => (
       loading="lazy"
       src={src}
       alt={alt}
-      className="h-full w-full object-cover transition-transform duration-200"
+      className="h-full w-full object-cover transition-transform duration-200 dark:brightness-90"
     />
   </div>
 );
@@ -83,14 +83,16 @@ const CardContent = ({
   modifier?: string;
 }) => (
   <div className="p-4">
-    <p className="font-semibold text-gray-800 transition-colors duration-200 group-hover:text-blue-600">
+    <p className="font-semibold text-gray-800 transition-colors duration-200 group-hover:text-blue-600 dark:text-white">
       {label}
     </p>
     {subtitle && (
-      <p className="text-sm text-gray-800">
+      <p className="text-sm text-gray-800 dark:text-white">
         {subtitle} {modifier && `(${modifier})`}
       </p>
     )}
-    <p className="mt-2 text-sm text-gray-600">Tổng hợp kiến thức từ A đến Z</p>
+    <p className="dark:text-white-900 mt-2 text-sm text-gray-600">
+      Tổng hợp kiến thức từ A đến Z
+    </p>
   </div>
 );

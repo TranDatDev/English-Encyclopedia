@@ -1,4 +1,4 @@
-# Thì Tương Lai Đơn (Simple Future Tense)
+# Tương Lai Đơn
 
 ## 1. Định nghĩa
 

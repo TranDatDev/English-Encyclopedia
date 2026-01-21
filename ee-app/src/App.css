@@ -1,2 +1,146 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --breakpoint-xs: 20rem;
+  --breakpoint-xsp: 30rem;
+  --breakpoint-smp: 44rem;
+  --breakpoint-mdp: 56rem;
+  --breakpoint-lgp: 72rem;
+}
+
+@theme {
+  --color-black-1000: rgb(10, 10, 10);
+  --color-black-950: rgb(14, 14, 14);
+  --color-black-900: rgb(18, 18, 18);
+  --color-black-850: rgb(22, 22, 22);
+  --color-black-800: rgb(26, 26, 26);
+  --color-black-750: rgb(30, 30, 30);
+  --color-black-700: rgb(34, 34, 34);
+  --color-black-650: rgb(38, 38, 38);
+  --color-black-600: rgb(42, 42, 42);
+  --color-black-550: rgb(46, 46, 46);
+  --color-black-500: rgb(50, 50, 50);
+
+  --color-black-450: rgb(55, 55, 55);
+  --color-black-400: rgb(60, 60, 60);
+  --color-black-350: rgb(65, 65, 65);
+  --color-black-300: rgb(70, 70, 70);
+  --color-black-250: rgb(75, 75, 75);
+  --color-black-200: rgb(80, 80, 80);
+  --color-black-150: rgb(85, 85, 85);
+  --color-black-100: rgb(90, 90, 90);
+  --color-black-50: rgb(95, 95, 95);
+  --color-black-0: rgb(100, 100, 100);
+
+  --color-white-1000: rgb(255, 255, 255);
+  --color-white-950: rgb(250, 250, 250);
+  --color-white-900: rgb(242, 242, 242);
+  --color-white-850: rgb(234, 234, 234);
+  --color-white-800: rgb(226, 226, 226);
+  --color-white-750: rgb(218, 218, 218);
+  --color-white-700: rgb(210, 210, 210);
+  --color-white-650: rgb(202, 202, 202);
+  --color-white-600: rgb(194, 194, 194);
+  --color-white-550: rgb(186, 186, 186);
+  --color-white-500: rgb(178, 178, 178);
+
+  --color-white-450: rgb(170, 170, 170);
+  --color-white-400: rgb(163, 163, 163);
+  --color-white-350: rgb(156, 156, 156);
+  --color-white-300: rgb(149, 149, 149);
+  --color-white-250: rgb(142, 142, 142);
+  --color-white-200: rgb(135, 135, 135);
+  --color-white-150: rgb(128, 128, 128);
+  --color-white-100: rgb(121, 121, 121);
+  --color-white-50: rgb(114, 114, 114);
+  --color-white-0: rgb(107, 107, 107);
+
+  --bg-black-0: rgb(0, 0, 0);
+  --bg-black-100: rgb(4, 4, 4);
+  --bg-black-200: rgb(8, 8, 8);
+  --bg-black-300: rgb(12, 12, 12);
+  --bg-black-400: rgb(16, 16, 16);
+  --bg-black-500: rgb(20, 20, 20);
+  --bg-black-600: rgb(24, 24, 24);
+  --bg-black-700: rgb(28, 28, 28);
+  --bg-black-800: rgb(32, 32, 32);
+  --bg-black-900: rgb(36, 36, 36);
+  --bg-black-1000: rgb(40, 40, 40);
+
+  --bg-white-1000: rgb(255, 255, 255);
+  --bg-white-950: rgb(250, 250, 250);
+  --bg-white-900: rgb(242, 242, 242);
+  --bg-white-850: rgb(234, 234, 234);
+  --bg-white-800: rgb(226, 226, 226);
+  --bg-white-750: rgb(218, 218, 218);
+  --bg-white-700: rgb(210, 210, 210);
+  --bg-white-650: rgb(202, 202, 202);
+  --bg-white-600: rgb(194, 194, 194);
+  --bg-white-550: rgb(186, 186, 186);
+  --bg-white-500: rgb(178, 178, 178);
+
+  --bg-white-450: rgb(170, 170, 170);
+  --bg-white-400: rgb(163, 163, 163);
+  --bg-white-350: rgb(156, 156, 156);
+  --bg-white-300: rgb(149, 149, 149);
+  --bg-white-250: rgb(142, 142, 142);
+  --bg-white-200: rgb(135, 135, 135);
+  --bg-white-150: rgb(128, 128, 128);
+  --bg-white-100: rgb(121, 121, 121);
+  --bg-white-50: rgb(114, 114, 114);
+  --bg-white-0: rgb(107, 107, 107);
+}
+
+html {
+  background: hsl(30, 29%, 97%);
+  @variant dark {
+    background: var(--color-black-850);
+  }
+  scroll-behavior: smooth;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+@utility text-contrast-* {
+  color: --value(--color-black-*);
+  @variant dark {
+    color: --value(--color-white- *);
+  }
+}
+
+@utility bg-contrast-* {
+  background-color: --value(--bg-white-*);
+  @variant dark {
+    background-color: --value(--bg-black- *);
+  }
+}
+
+.shiny-text {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 5s linear infinite;
+}
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}

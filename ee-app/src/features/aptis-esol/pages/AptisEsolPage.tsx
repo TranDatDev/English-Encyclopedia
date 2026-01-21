@@ -116,7 +116,6 @@ export default function AptisEsolPage() {
               subFolder="listening"
               className="grid-cols-1 sm:grid-cols-3"
               subtitle="listening"
-              modifier={["A1-A2", "B1-B2", "C1-C2"]}
             />
           </section>
           <section className="mb-48 rounded-xl">
@@ -137,7 +136,6 @@ export default function AptisEsolPage() {
               subFolder="speaking"
               className="grid-cols-1 sm:grid-cols-3"
               subtitle="speaking"
-              modifier={["A1-A2", "B1-B2", "C1-C2"]}
             />
           </section>
           <section className="mb-48 rounded-xl">
@@ -158,7 +156,6 @@ export default function AptisEsolPage() {
               subFolder="reading"
               className="grid-cols-1 sm:grid-cols-3"
               subtitle="reading"
-              modifier={["A1-A2", "B1-B2", "C1-C2"]}
             />
           </section>
           <section className="mb-48 rounded-xl">
@@ -179,7 +176,6 @@ export default function AptisEsolPage() {
               subFolder="writing"
               className="grid-cols-1 sm:grid-cols-3"
               subtitle="writing"
-              modifier={["A1-A2", "B1-B2", "C1-C2"]}
             />
           </section>
           <section className="container mx-auto my-12 flex flex-col gap-8">

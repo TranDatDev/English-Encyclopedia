@@ -1,18 +1,33 @@
+import { lazy } from "react";
 import type { RouteObject } from "react-router";
 
-import PhoneticPage from "@/features/phonetic/pages/PhoneticPage";
-import {
+import { createExerciseRoutes } from "@/shared/routes/CreateExerciseRoutes";
+
+const PhoneticPage = lazy(
+  () => import("@/features/phonetic/pages/PhoneticPage"),
+);
+const {
   phoneticList,
   phoneticPronounceExerciseList,
   phoneticStressExerciseList,
-} from "@/features/phonetic/routes/list";
-import {
-  PronounceExercise,
-  StressExercise,
-} from "@/shared/components/exercise";
-import { MarkdownSection } from "@/shared/components/markdown";
-import MainLayout from "@/shared/layouts/MainLayout";
-import { createExerciseRoutes } from "@/shared/routes/CreateExerciseRoutes";
+} = await import("@/features/phonetic/routes/list");
+
+const PronounceExercise = lazy(() =>
+  import("@/shared/components/exercise").then((m) => ({
+    default: m.PronounceExercise,
+  })),
+);
+const StressExercise = lazy(() =>
+  import("@/shared/components/exercise").then((m) => ({
+    default: m.StressExercise,
+  })),
+);
+const MarkdownSection = lazy(() =>
+  import("@/shared/components/markdown").then((m) => ({
+    default: m.MarkdownSection,
+  })),
+);
+const MainLayout = lazy(() => import("@/shared/layouts/MainLayout"));
 
 export const children: RouteObject[] = phoneticList.map(
   ({ slug, content }) => ({
@@ -33,7 +48,6 @@ export const childrenPronounceExercise = createExerciseRoutes(
   true,
 );
 
-// Route chính
 const phoneticRoutes: RouteObject = {
   path: "phonetic",
   element: <MainLayout />,
