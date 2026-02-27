@@ -25,7 +25,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     const prefersDark = window.matchMedia(
       "(prefers-color-scheme: dark)",
     ).matches;
-    return prefersDark ? "dark" : "light";
+    return prefersDark ? "light" : "light";
   });
 
   // Đồng bộ theme với DOM và localStorage

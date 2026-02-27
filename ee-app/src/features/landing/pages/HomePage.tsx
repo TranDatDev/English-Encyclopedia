@@ -1,7 +1,6 @@
 import eeLogo from "@shared/assets/EE_logo.svg";
 
 import AutoCarousel from "@/shared/components/AutoCarousel";
-import BinaryTestComponent from "@/shared/components/BinaryTestComponent";
 import FadeInSection from "@/shared/components/FadeInSection";
 import ShinyText from "@/shared/components/ShinyText";
 
@@ -76,41 +75,6 @@ const HomePage = () => {
           rounded="rounded-3xl"
         />
       </div>
-      <div className="bg-contrast-800 relative w-64 overflow-visible rounded-[30px] p-6 shadow-md">
-        {/* Ribbon */}
-        tsx
-        <div className="absolute top-6 -right-4">
-          <div className="relative inline-block bg-teal-600 px-5 py-1.5 text-sm font-bold text-white shadow-lg">
-            A1
-            {/* Tam giác nhỏ ở góc dưới bên PHẢI - giữ nguyên clip-path cũ */}
-            <span className="absolute right-0 bottom-0 h-4 w-4 translate-y-full bg-teal-700 [clip-path:polygon(0_0,0_100%,100%_0)]" />
-          </div>
-        </div>
-        <h2 className="text-contrast-800 mb-4 text-2xl font-semibold">
-          Premium
-        </h2>
-        <ul className="space-y-3 text-gray-600">
-          <li className="flex items-center gap-2">
-            <span className="text-teal-500">✔</span> Sample Text Here
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-teal-500">✔</span> Other Text Title
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-teal-500">✔</span> Text Space Goes Here
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-teal-500">✔</span> Description Space
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-teal-500">✔</span> Sample Text Here
-          </li>
-        </ul>
-        <button className="mt-6 rounded-md bg-teal-600 px-6 py-2 text-white">
-          Select
-        </button>
-      </div>
-      <BinaryTestComponent />
     </>
   );
 };
