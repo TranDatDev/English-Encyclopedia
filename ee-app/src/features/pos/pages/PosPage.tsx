@@ -1,12 +1,10 @@
 import { posJsonList, posList } from "@/features/pos/routes/route";
 import CardList from "@/shared/components/card/components/CardList";
-import DictionarySearch from "@/shared/components/DictionarySearch";
 import { Heading } from "@/shared/components/Heading";
 
 export default function PosPage() {
   return (
     <>
-      <DictionarySearch className="mb-10" />
       <title>Từ loại - English Encyclopedia</title>
       <div className="margin-x-default py-10">
         {/* Phần giới thiệu */}

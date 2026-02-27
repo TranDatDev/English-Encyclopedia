@@ -5,7 +5,6 @@ import {
   aptisEsolWritingList,
 } from "@/features/aptis-esol/routes/route";
 import CardList from "@/shared/components/card/components/CardList";
-import CardWithInfo from "@/shared/components/card/components/CardWithInfo";
 import ChatBubbleCard from "@/shared/components/ChatBubbleCard";
 
 export default function AptisEsolPage() {
@@ -221,12 +220,6 @@ export default function AptisEsolPage() {
           </section>
         </div>
       </div>
-      <CardWithInfo
-        title="Card Title"
-        description="Card Description"
-        link="https://example.com"
-        className="margin-x-default"
-      />
     </>
   );
 }

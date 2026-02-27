@@ -19,6 +19,7 @@ export default function IeltsPage() {
           <h1 className="mb-4 text-3xl font-bold text-gray-800 sm:text-4xl">
             IELTS
           </h1>
+          <h2>WORK IN PROCESS</h2>
           <p className="max-w-xl text-gray-600 sm:text-lg">
             IELTS (International English Language Testing System) là một trong
             những kỳ thi đánh giá năng lực tiếng Anh phổ biến nhất trên thế
@@ -26,7 +27,7 @@ export default function IeltsPage() {
             sinh trong các tình huống học tập và làm việc.
           </p>
         </div>
-        <div className="my-20 flex gap-4">
+        <div className="my-20 flex hidden gap-4">
           <ChatBubbleCard
             title="Hình Thức"
             subtitle="IELTS có 4 kỹ năng: Nghe, Nói, Đọc, Viết."
@@ -115,7 +116,7 @@ export default function IeltsPage() {
             ]}
           />
         </div>
-        <section className="mt-12">
+        <section className="mt-12 hidden">
           <h2 className="mb-6 text-xl font-bold text-gray-800 sm:text-2xl">
             Bài tập trắc nghiệm
           </h2>

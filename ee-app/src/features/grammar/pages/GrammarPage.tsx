@@ -27,6 +27,11 @@ export default function GrammarPage() {
           <h3 className="mt-8 mb-2 text-lg font-bold text-gray-800 sm:text-xl">
             Thể Chủ Động (Active Voice)
           </h3>
+          <blockquote className="m-28 text-5xl leading-20">
+            “Thể chủ động đặt chủ thể vào trung tâm hành động — ai làm, làm gì
+            được thể hiện rõ ràng. Câu văn vì thế trở nên trực diện, mạch lạc và
+            đầy sức thuyết phục.”
+          </blockquote>
           {/* Danh sách card */}
           <CardList
             items={activeTenseList}
@@ -37,6 +42,12 @@ export default function GrammarPage() {
           <h3 className="mt-8 mb-2 text-lg font-bold text-gray-800 sm:text-xl">
             Thể Bị Động (Passive Voice)
           </h3>
+          <blockquote className="m-28 text-5xl leading-20">
+            “Trong thể bị động, hành động được đặt lên trước, còn chủ thể có thể
+            ẩn đi hoặc lùi về phía sau — điều được nhấn mạnh không phải là ai
+            làm, mà là điều gì đã xảy ra. Nhờ đó, câu văn trở nên khách quan,
+            tinh tế và giàu chiều sâu biểu đạt.”
+          </blockquote>
           <CardList
             items={passiveTenseList}
             basePath="/grammar"

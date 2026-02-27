@@ -52,6 +52,7 @@ export default function MainLayout() {
             className="absolute left-16 h-4 w-auto lg:h-8 dark:invert-100"
             alt="English Encyclopedia logo"
           />
+          <span className="absolute left-28 font-bold">v1.0.0</span>
           <div className="flex w-full items-center justify-between">
             <nav className="text-black-600 dark:text-white-600 flex items-center gap-6 font-semibold">
               <Link
@@ -246,7 +247,7 @@ export default function MainLayout() {
             <div className="flex w-full max-w-[25%] items-center">
               <DictionarySearchBox />
             </div>
-            <nav className="text-black-600 dark:text-white-600 flex items-center gap-6 font-semibold">
+            <nav className="text-black-600 dark:text-white-600 flex hidden items-center gap-6 font-semibold">
               <Link
                 to="/"
                 className="hidden transition-colors duration-200 hover:text-blue-500 lg:block"
