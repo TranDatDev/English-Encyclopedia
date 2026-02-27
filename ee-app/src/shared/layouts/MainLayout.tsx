@@ -52,7 +52,7 @@ export default function MainLayout() {
             className="absolute left-16 h-4 w-auto lg:h-8 dark:invert-100"
             alt="English Encyclopedia logo"
           />
-          <span className="absolute left-28 font-bold">v1.0.0</span>
+          <span className="absolute left-28 font-bold">v0.0.1</span>
           <div className="flex w-full items-center justify-between">
             <nav className="text-black-600 dark:text-white-600 flex items-center gap-6 font-semibold">
               <Link
